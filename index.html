@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intel: Sustainability Through the Ages</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header / Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
+      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
+      <!-- Main Heading -->
+      <h1>
+        Sustainability Through the Ages
+      </h1>
+
+      <!-- Subheading / Description -->
+      <p>
+        Explore Intel's journey through time.
+      </p>
+      <p>
+        Discover how our commitment to innovation shapes a sustainable future.
+      </p>
+      <p>
+        Technology, people, and our planet work together.
+      </p>
+    </div>
+  </header>
+
+  <!-- Timeline Cards Section (inside the blue box) -->
+  <section class="timeline-box">
+    <section class="timeline">
+
+    <!-- Card 1: 1968 -->
+    <article class="timeline-card">
+      <h2>1968</h2>
+      <h3>Intel Founded</h3>
+      <p>
+        Robert Noyce and Gordon Moore rename the newly formed company 
+        NM Electronics to Intel Corporation, laying the foundation for 
+        decades of technological innovation.
+      </p>
+      <!-- Add image -->
+      <img class="timeline-image" src="img/1968-Generated_Image.png" alt="Intel founders in 1968" />
+    </article>
+
+    <!-- Card 2: 1971 -->
+    <article class="timeline-card">
+      <h2>1971</h2>
+      <h3>First Microprocessor</h3>
+      <p>
+        Intel debuts the 4004, the world's first commercial microprocessor, 
+        igniting the microprocessor revolution and propelling the future 
+        of computing devices.
+      </p>
+      <!-- Add image -->
+      <img class="timeline-image" src="img/1971-Generated_Image.png" alt="The Intel 4004 microprocessor" />
+    </article>
+
+    <!-- Card 3: 1978 -->
+    <article class="timeline-card">
+      <h2>1978</h2>
+      <h3>8086 Processor</h3>
+      <p>
+        Launch of the 8086 processor, establishing the x86 architecture 
+        that drives countless PCs and servers in the modern era.
+      </p>
+      <!-- Add image -->
+      <img class="timeline-image" src="img/8086-Generated_Image.png" alt="Intel 8086 processor" />
+    </article>
+
+    <!-- Card 4: 1985 -->
+    <article class="timeline-card">
+      <h2>1985</h2>
+      <h3>386 Processor</h3>
+      <p>
+        Intel introduces the 386 processor with 32-bit architecture, 
+        ushering in a new era of performance and multitasking for 
+        personal computers.
+      </p>
+      <!-- Add image -->
+      <img class="timeline-image" src="img/386-Generarted_Image.png" alt="Intel 386 processor" />
+    </article>
+
+    <!-- Card 5: 2006 -->
+    <article class="timeline-card">
+      <h2>2006</h2>
+      <h3>Peak GHG Emissions</h3>
+      <p>
+        This year marks Intel's highest annual greenhouse gas emissions 
+        for operations. Over subsequent years, Intel invests heavily in 
+        chemical abatement, renewable energy, and energy-efficient 
+        manufacturing to reverse this trend.
+      </p>
+      <!-- Add image -->
+      <img class="timeline-image" src="img/2006-Generated_Image.png" alt="Factory emissions and sustainability focus" />
+    </article>
+
+    <!-- Card 6: 2020 -->
+    <article class="timeline-card">
+      <h2>2020</h2>
+      <h3>RISE Strategy</h3>
+      <p>
+        Intel launches its RISE (Responsible, Inclusive, Sustainable, 
+        Enabling) strategy and 2030 goals, aiming to drive industry-wide 
+        progress on climate action, water stewardship, and waste reduction.
+      </p>
+      <!-- Add image -->
+      <img class="timeline-image" src="img/2020-Generated_Image.png" alt="RISE strategy and sustainability goals" />
+    </article>
+
+    <!-- Card 7: 2022 -->
+    <article class="timeline-card">
+      <h2>2022</h2>
+      <h3>Net-Zero By 2040</h3>
+      <p>
+        Intel announces its commitment to achieve net-zero greenhouse 
+        gas emissions (Scope 1 and 2) across its global operations 
+        by 2040, building on years of environmental initiatives.
+      </p>
+      <!-- Add image -->
+      <img class="timeline-image" src="img/2022-Generated_Image.png" alt="Net-zero commitment for 2040" />
+    </article>
+
+    <!-- Card 8: 2023 -->
+    <article class="timeline-card">
+      <h2>2023</h2>
+      <h3>Renewable Electricity</h3>
+      <p>
+        The company achieves 99% renewable electricity usage worldwide, 
+        helping to drastically lower carbon emissions and driving progress 
+        toward Intel's long-term sustainability goals.
+      </p>
+      <!-- Add image -->
+      <img class="timeline-image" src="img/2023-Generated_Image.png" alt="Renewable electricity milestone" />
+    </article>
+
+    <!-- Card 9: 2024 -->
+    <article class="timeline-card">
+      <h2>2024</h2>
+      <h3>Sustainability Summit</h3>
+      <p>
+        Intel hosts its first Sustainability Summit, uniting suppliers, 
+        government officials, and industry leaders to collaborate on 
+        next-generation sustainable semiconductor manufacturing.
+      </p>
+      <!-- Add image -->
+      <img class="timeline-image" src="img/2024-Generated_Image.png" alt="Sustainability summit collaboration" />
+    </article>
+    </section>
+  </section>
+
+  <section class="timeline-instructions">
+    <p>Scroll or Click and Drag to View Timeline</p>
+    <p>Hover over cards on PC or tap on phone to learn more!</p>
+  </section>
+
+  <script>
+    // Allow the mouse wheel to scroll the horizontal timeline on large screens
+    const timelineBox = document.querySelector(".timeline-box");
+    const mediaQuery = window.matchMedia("(min-width: 1200px), (min-height: 1200px)");
+    const timelineCards = document.querySelectorAll(".timeline-card");
+
+    if (timelineBox) {
+      const timeline = document.querySelector(".timeline");
+      const cards = Array.from(timelineCards);
+
+      const scrollToCard = (index) => {
+        const card = cards[index];
+        if (!card) {
+          return;
+        }
+
+        const targetLeft = card.offsetLeft - 20;
+        timelineBox.scrollTo({ left: targetLeft, behavior: "smooth" });
+      };
+
+      timelineBox.addEventListener("wheel", (event) => {
+        if (!mediaQuery.matches || !timeline || cards.length === 0) {
+          return;
+        }
+
+        if (timelineBox.scrollWidth > timelineBox.clientWidth) {
+          event.preventDefault();
+          const direction = event.deltaY > 0 ? 1 : -1;
+          const currentIndex = cards.reduce((closestIndex, card, index) => {
+            const currentDistance = Math.abs(card.offsetLeft - timelineBox.scrollLeft);
+            const closestDistance = Math.abs(cards[closestIndex].offsetLeft - timelineBox.scrollLeft);
+            return currentDistance < closestDistance ? index : closestIndex;
+          }, 0);
+          const nextIndex = Math.max(0, Math.min(cards.length - 1, currentIndex + direction));
+          scrollToCard(nextIndex);
+        }
+      }, { passive: false });
+
+      // Click and drag to scroll on large screens
+      let isDragging = false;
+      let startX = 0;
+      let startScrollLeft = 0;
+
+      timelineBox.addEventListener("mousedown", (event) => {
+        if (!mediaQuery.matches) {
+          return;
+        }
+
+        isDragging = true;
+        timelineBox.classList.add("is-dragging");
+        startX = event.pageX - timelineBox.offsetLeft;
+        startScrollLeft = timelineBox.scrollLeft;
+      });
+
+      timelineBox.addEventListener("mouseleave", () => {
+        isDragging = false;
+        timelineBox.classList.remove("is-dragging");
+      });
+
+      timelineBox.addEventListener("mouseup", () => {
+        isDragging = false;
+        timelineBox.classList.remove("is-dragging");
+      });
+
+      timelineBox.addEventListener("mousemove", (event) => {
+        if (!isDragging || !mediaQuery.matches) {
+          return;
+        }
+
+        event.preventDefault();
+        const currentX = event.pageX - timelineBox.offsetLeft;
+        const distance = currentX - startX;
+        timelineBox.scrollLeft = startScrollLeft - distance;
+      });
+    }
+
+    // Tap to show details on small screens only
+    timelineCards.forEach((card) => {
+      card.addEventListener("click", () => {
+        if (mediaQuery.matches) {
+          return;
+        }
+
+        timelineCards.forEach((otherCard) => {
+          if (otherCard !== card) {
+            otherCard.classList.remove("is-active");
+          }
+        });
+
+        card.classList.toggle("is-active");
+      });
+    });
+
+    mediaQuery.addEventListener("change", (event) => {
+      if (event.matches) {
+        timelineCards.forEach((card) => card.classList.remove("is-active"));
+      }
+    });
+  </script>
+</body>
+</html>

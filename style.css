@@ -1,0 +1,284 @@
+/* Add your CSS here */
+
+/* Page background */
+body {
+	background-color: #f2f6fb;
+	margin: 0;
+}
+
+/* Hero styles */
+.hero {
+	padding: 140px 20px;
+	text-align: center;
+	color: #ffffff;
+	font-weight: 700;
+	background-color: #0b5fa5;
+	/* Allow a background image layer inside the hero */
+	position: relative;
+	overflow: hidden;
+	/* Use flexbox to keep hero content centered */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero::before {
+	/* Place the image over the blue background but under the text */
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url("img/Tech_BG.png");
+	background-size: cover;
+	background-position: center;
+	opacity: 0.25;
+	pointer-events: none;
+}
+
+.hero-content {
+	/* Keep the logo and text above the image layer */
+	position: relative;
+	z-index: 1;
+}
+
+.hero img {
+	/* Make the Intel logo smaller */
+	width: 140px;
+	height: auto;
+}
+
+.hero h1 {
+	font-size: 36px;
+}
+
+.hero p {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 6px 0;
+}
+
+/* Timeline styles */
+.timeline-box {
+	/* Light-blue box above the timeline */
+	background-color: #cfe6ff;
+	/* Let the box grow with the timeline content */
+	padding: 20px 12px;
+	/* Make the box narrower and center it */
+	width: 70%;
+	margin: 12px auto;
+	border-radius: 2px;
+}
+
+.timeline {
+	/* Simple vertical timeline line */
+	position: relative;
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 10px 10px 10px 40px;
+	/* Flex layout: stacked by default */
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.timeline::before {
+	/* The vertical line */
+	content: "";
+	position: absolute;
+	left: 18px;
+	top: 0;
+	bottom: 0;
+	width: 4px;
+	background-color: #0b5fa5;
+}
+
+.timeline-card {
+	/* Timeline card */
+	position: relative;
+	margin: 16px 0;
+	background-color: #ffffff;
+	border: 2px solid #e6e6e6;
+	border-radius: 10px;
+	padding: 24px 20px 60px 24px;
+	min-height: 180px;
+	max-height: 300px;
+	min-width: 325px;
+	text-align: center;
+	box-sizing: border-box;
+	overflow: hidden;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-card h2 {
+	/* Tighten space below the date */
+	margin: 0;
+}
+
+.timeline-card h3 {
+	/* Tighten space above the heading */
+	margin: 0;
+}
+
+.timeline-image {
+	/* Keep card images neat and consistent */
+	width: 200px;
+	max-width: 200px;
+	height: 200px;
+	border-radius: 8px;
+	margin: 6px auto 12px;
+	display: block;
+	object-fit: cover;
+}
+
+.timeline-card p {
+	/* Hide details until hover */
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(106, 168, 230, 0.9);
+	color: #ffffff;
+	padding: 40px;
+	border-radius: 10px;
+	line-height: 1.4;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: opacity 0.6s ease;
+	overflow: auto;
+}
+
+
+
+.timeline-instructions {
+	/* Simple helper text under the timeline */
+	text-align: center;
+	color: #0b5fa5;
+	font-weight: 600;
+	margin: 8px auto 24px;
+}
+
+.timeline-instructions p {
+	margin: 6px 0;
+}
+
+/* Large screens (1200px+ width OR height): horizontal, scrollable timeline */
+@media (min-width: 1200px), (min-height: 1200px) {
+	.timeline-box {
+		/* Scroll on the container so the line spans all cards */
+		overflow-x: auto;
+		scroll-behavior: smooth;
+		/* Snap only when scrolling ends */
+		scroll-snap-type: x proximity;
+		scroll-snap-stop: normal;
+		scroll-padding-left: 20px;
+		/* Make space to show 4 cards at once */
+		width: 1140px;
+		max-width: 95%;
+		cursor: grab;
+	}
+
+	.timeline-box.is-dragging {
+		/* Prevent text selection while dragging */
+		cursor: grabbing;
+		user-select: none;
+	}
+
+	.timeline-box.is-dragging * {
+		user-select: none;
+	}
+
+	.timeline {
+		/* Lay cards in a row and allow scrolling */
+		display: inline-flex;
+		flex-direction: row;
+		gap: 20px;
+		padding: 40px 20px 20px;
+		max-width: none;
+		width: max-content;
+	}
+
+	.timeline::before {
+		/* The horizontal line */
+		left: 0;
+		right: 0;
+		top: 20px;
+		bottom: auto;
+		height: 4px;
+		width: auto;
+	}
+
+	.timeline-card {
+		/* Keep each card a readable width */
+		min-width: 363px;
+		margin: 0;
+		scroll-snap-align: start;
+	}
+
+
+	.timeline-card:hover p {
+		/* Show details on hover (large screens) */
+		opacity: 1;
+		visibility: visible;
+		background-color: rgba(90, 164, 230, 0.9);
+		color: #ffffff;
+		font-size: 18px;
+	}
+
+	.timeline-card:hover {
+		/* Shade the card blue on hover (large screens) */
+		background-color: #5aa4e6;
+		border-color: #5aa4e6;
+		transform: scale(1.03);
+		box-shadow: 0 10px 22px rgba(11, 95, 165, 0.35);
+	}
+}
+
+/* Smaller screens: cards fit the screen */
+@media (max-width: 1199px) and (max-height: 1199px) {
+	.timeline-box {
+		width: 95%;
+	}
+
+	.timeline-card {
+		min-width: 0;
+		width: 100%;
+		min-height: 260px;
+	}
+
+	.timeline-card h2 {
+		font-size: 28px;
+	}
+
+	.timeline-card h3 {
+		font-size: 20px;
+	}
+
+	.timeline-card p {
+		font-size: 18px;
+	}
+
+	.timeline-card.is-active p {
+		/* Show details on click (small screens) */
+		opacity: 1;
+		visibility: visible;
+		background-color: rgba(90, 164, 230, 0.9);
+		color: #ffffff;
+		font-size: 24px;
+	}
+
+	.timeline-card.is-active {
+		/* Shade the card blue on click (small screens) */
+		background-color: #5aa4e6;
+		border-color: #5aa4e6;
+		transform: scale(1.03);
+		box-shadow: 0 10px 22px rgba(11, 95, 165, 0.35);
+	}
+}
