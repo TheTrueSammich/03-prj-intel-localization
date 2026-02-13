@@ -15,8 +15,8 @@
   <title>Intel: Sustainability Through the Ages</title>
   <!-- Performance: Preload critical CSS -->
   <link rel="preload" href="style.css" as="style" />
-  <!-- Bootstrap CSS for responsive grid layout and RTL support -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+  <!-- Bootstrap CSS for responsive grid layout (LTR default) -->
+  <link id="bootstrap-css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Bootstrap Icons for scalable SVG icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="style.css" />
@@ -729,12 +729,17 @@
      */
     function applyTextDirection(isRTL) {
       const html = document.documentElement;
+      const bootstrapLink = document.getElementById('bootstrap-css');
       
       if (isRTL) {
         // Apply RTL
-        html.dir = 'rtl';
-        html.lang = html.lang || 'ar'; // Set default RTL language if not set
-        document.body.style.direction = 'rtl';
+        html.setAttribute('dir', 'rtl');
+        document.body.setAttribute('dir', 'rtl');
+        
+        // Switch to Bootstrap RTL CSS
+        if (bootstrapLink) {
+          bootstrapLink.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css';
+        }
         
         // Store preference in sessionStorage for consistency
         sessionStorage.setItem('textDirection', 'rtl');
@@ -742,8 +747,13 @@
         console.log('✓ RTL layout applied for language:', html.lang);
       } else {
         // Apply LTR
-        html.dir = 'ltr';
-        document.body.style.direction = 'ltr';
+        html.setAttribute('dir', 'ltr');
+        document.body.setAttribute('dir', 'ltr');
+        
+        // Switch to Bootstrap LTR CSS
+        if (bootstrapLink) {
+          bootstrapLink.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css';
+        }
         
         // Store preference in sessionStorage
         sessionStorage.setItem('textDirection', 'ltr');
