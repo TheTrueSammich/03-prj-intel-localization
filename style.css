@@ -394,6 +394,29 @@ html[dir="rtl"] .form-label {
 	text-align: right;
 }
 
+/* Keep the entire newsletter form in RTL when active */
+html[dir="rtl"] .newsletter-section form {
+	direction: rtl;
+	text-align: right;
+}
+
+html[dir="rtl"] .newsletter-section .form-control,
+html[dir="rtl"] .newsletter-section .form-text,
+html[dir="rtl"] .newsletter-section .form-check-label {
+	text-align: right;
+}
+
+html[dir="rtl"] .newsletter-section .form-check {
+	padding-right: 1.5em;
+	padding-left: 0;
+}
+
+html[dir="rtl"] .newsletter-section .form-check .form-check-input {
+	float: right;
+	margin-right: -1.5em;
+	margin-left: 0;
+}
+
 /* Adjust button alignment for RTL */
 html[dir="rtl"] .btn {
 	text-align: center;
