@@ -3,16 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore Intel's journey through sustainability and innovation across the ages. Discover how Intel's commitment to environmental responsibility shapes a sustainable future." />
+  <meta property="og:title" content="Intel: Sustainability Through the Ages" />
+  <meta property="og:description" content="Explore Intel's journey through sustainability and innovation. Learn about our commitment to environmental responsibility and net-zero emissions by 2040." />
+  <meta property="og:url" content="https://example.com" />
+  <meta property="og:type" content="website" />
+  <!-- Performance optimizations: preconnect to external resources -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="canonical" href="https://example.com" />
   <title>Intel: Sustainability Through the Ages</title>
+  <!-- Performance: Preload critical CSS -->
+  <link rel="preload" href="style.css" as="style" />
+  <!-- Bootstrap CSS for responsive grid layout and RTL support -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons for scalable SVG icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="style.css" />
+  <!-- Schema markup for organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Intel Corporation",
+    "url": "https://example.com",
+    "description": "Explore Intel's journey through sustainability and innovation"
+  }
+  </script>
 </head>
 <body>
 
+  <!-- Skip to main content link for keyboard users (screen reader only) -->
+  <a href="#main-content" class="sr-only sr-only-focusable">Skip to main content</a>
+
   <!-- Header / Hero Section -->
-  <header class="hero">
+  <header class="hero" role="banner">
     <div class="hero-content">
       <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
+      <img src="img/intel-header-logo.svg" alt="Intel Logo" width="140" height="140" />
       <!-- Main Heading -->
       <h1>
         Sustainability Through the Ages
@@ -45,7 +73,7 @@
         decades of technological innovation.
       </p>
       <!-- Add image -->
-      <img class="timeline-image" src="img/1968-Generated_Image.png" alt="Intel founders in 1968" />
+      <img class="timeline-image" src="img/1968-Generated_Image.png" alt="Intel founders in 1968" loading="lazy" />
     </article>
 
     <!-- Card 2: 1971 -->
@@ -58,7 +86,7 @@
         of computing devices.
       </p>
       <!-- Add image -->
-      <img class="timeline-image" src="img/1971-Generated_Image.png" alt="The Intel 4004 microprocessor" />
+      <img class="timeline-image" src="img/1971-Generated_Image.png" alt="The Intel 4004 microprocessor" loading="lazy" />
     </article>
 
     <!-- Card 3: 1978 -->
@@ -70,7 +98,7 @@
         that drives countless PCs and servers in the modern era.
       </p>
       <!-- Add image -->
-      <img class="timeline-image" src="img/8086-Generated_Image.png" alt="Intel 8086 processor" />
+      <img class="timeline-image" src="img/8086-Generated_Image.png" alt="Intel 8086 processor" loading="lazy" />
     </article>
 
     <!-- Card 4: 1985 -->
@@ -83,7 +111,7 @@
         personal computers.
       </p>
       <!-- Add image -->
-      <img class="timeline-image" src="img/386-Generarted_Image.png" alt="Intel 386 processor" />
+      <img class="timeline-image" src="img/386-Generarted_Image.png" alt="Intel 386 processor" loading="lazy" />
     </article>
 
     <!-- Card 5: 2006 -->
@@ -97,7 +125,7 @@
         manufacturing to reverse this trend.
       </p>
       <!-- Add image -->
-      <img class="timeline-image" src="img/2006-Generated_Image.png" alt="Factory emissions and sustainability focus" />
+      <img class="timeline-image" src="img/2006-Generated_Image.png" alt="Factory emissions and sustainability focus" loading="lazy" />
     </article>
 
     <!-- Card 6: 2020 -->
@@ -110,7 +138,7 @@
         progress on climate action, water stewardship, and waste reduction.
       </p>
       <!-- Add image -->
-      <img class="timeline-image" src="img/2020-Generated_Image.png" alt="RISE strategy and sustainability goals" />
+      <img class="timeline-image" src="img/2020-Generated_Image.png" alt="RISE strategy and sustainability goals" loading="lazy" />
     </article>
 
     <!-- Card 7: 2022 -->
@@ -123,7 +151,7 @@
         by 2040, building on years of environmental initiatives.
       </p>
       <!-- Add image -->
-      <img class="timeline-image" src="img/2022-Generated_Image.png" alt="Net-zero commitment for 2040" />
+      <img class="timeline-image" src="img/2022-Generated_Image.png" alt="Net-zero commitment for 2040" loading="lazy" />
     </article>
 
     <!-- Card 8: 2023 -->
@@ -136,7 +164,7 @@
         toward Intel's long-term sustainability goals.
       </p>
       <!-- Add image -->
-      <img class="timeline-image" src="img/2023-Generated_Image.png" alt="Renewable electricity milestone" />
+      <img class="timeline-image" src="img/2023-Generated_Image.png" alt="Renewable electricity milestone" loading="lazy" />
     </article>
 
     <!-- Card 9: 2024 -->
@@ -149,7 +177,7 @@
         next-generation sustainable semiconductor manufacturing.
       </p>
       <!-- Add image -->
-      <img class="timeline-image" src="img/2024-Generated_Image.png" alt="Sustainability summit collaboration" />
+      <img class="timeline-image" src="img/2024-Generated_Image.png" alt="Sustainability summit collaboration" loading="lazy" />
     </article>
     </section>
   </section>
@@ -158,6 +186,223 @@
     <p>Scroll or Click and Drag to View Timeline</p>
     <p>Hover over cards on PC or tap on phone to learn more!</p>
   </section>
+
+  <!-- Main content section with id for skip link -->
+  <main id="main-content">
+
+  <!-- Three-Column Grid Section using Bootstrap -->
+  <section class="features-section">
+    <div class="container py-5">
+      <!-- Section heading -->
+      <h2 class="text-center mb-5">Our Global Impact</h2>
+      
+      <!-- Bootstrap Grid: 3 equal columns that stack on mobile -->
+      <div class="row g-4">
+        <!-- Column 1: Innovation -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <!-- Icon with Bootstrap Icons -->
+              <div class="mb-3">
+                <i class="bi bi-lightbulb text-primary" style="font-size: 2.5rem;"></i>
+              </div>
+              <h3 class="card-title">Innovation</h3>
+              <p class="card-text">
+                Intel continuously pushes technological boundaries to create 
+                products that shape the future of computing and semiconductor 
+                manufacturing worldwide.
+              </p>
+            </div>
+            <!-- Button in footer of card -->
+            <div class="card-footer bg-white border-top">
+              <a href="#" class="btn btn-primary btn-sm w-100">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Sustainability -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <!-- Icon with Bootstrap Icons -->
+              <div class="mb-3">
+                <i class="bi bi-recycle text-success" style="font-size: 2.5rem;"></i>
+              </div>
+              <h3 class="card-title">Sustainability</h3>
+              <p class="card-text">
+                Our commitment to sustainability drives us to reduce emissions, 
+                conserve water, and minimize waste while maintaining industry-leading 
+                manufacturing standards.
+              </p>
+            </div>
+            <!-- Button in footer of card -->
+            <div class="card-footer bg-white border-top">
+              <a href="#" class="btn btn-primary btn-sm w-100">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3: Social Responsibility -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+              <!-- Icon with Bootstrap Icons -->
+              <div class="mb-3">
+                <i class="bi bi-people text-info" style="font-size: 2.5rem;"></i>
+              </div>
+              <h3 class="card-title">Social Responsibility</h3>
+              <p class="card-text">
+                We invest in communities through education, diversity initiatives, 
+                and ethical business practices to create a positive impact 
+                across the globe.
+              </p>
+            </div>
+            <!-- Button in footer of card -->
+            <div class="card-footer bg-white border-top">
+              <a href="#" class="btn btn-primary btn-sm w-100">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Subscription Section -->
+  <section class="newsletter-section bg-light py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <!-- Card wrapper to create a box around the form -->
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <!-- Section heading -->
+              <h2 class="text-center mb-3">Stay Updated</h2>
+              <p class="text-center text-muted mb-4">
+                Subscribe to Intel's sustainability newsletter and stay informed about 
+                our latest initiatives and environmental achievements.
+              </p>
+
+              <!-- Subscription Form -->
+              <form>
+            <div class="mb-3">
+              <!-- Full name input -->
+              <label for="nameInput" class="form-label">Full Name <span aria-label="required">*</span></label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="nameInput" 
+                placeholder="John Smith"
+                required
+                aria-required="true"
+                aria-describedby="nameHelp"
+              />
+              <small id="nameHelp" class="form-text text-muted">Please enter your first and last name.</small>
+            </div>
+
+            <div class="mb-3">
+              <!-- Email input label -->
+              <label for="emailInput" class="form-label">Email Address <span aria-label="required">*</span></label>
+              <!-- Email input field with Bootstrap styling -->
+              <input 
+                type="email" 
+                class="form-control" 
+                id="emailInput" 
+                placeholder="your.email@example.com"
+                required
+                aria-required="true"
+                aria-describedby="emailHelp"
+              />
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+
+            <div class="mb-3">
+              <!-- Company input -->
+              <label for="companyInput" class="form-label">Company</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="companyInput" 
+                placeholder="Your company name"
+                aria-describedby="companyHelp"
+              />
+              <small id="companyHelp" class="form-text text-muted">(Optional) Your organization's name.</small>
+            </div>
+
+            <div class="mb-3">
+              <!-- Phone input -->
+              <label for="phoneInput" class="form-label">Phone Number</label>
+              <input 
+                type="tel" 
+                class="form-control" 
+                id="phoneInput" 
+                placeholder="+1 (555) 123-4567"
+                aria-describedby="phoneHelp"
+              />
+              <small id="phoneHelp" class="form-text text-muted">(Optional) A valid phone number helps us reach you.</small>
+            </div>
+
+            <div class="mb-3">
+              <!-- Checkbox for terms agreement -->
+              <div class="form-check">
+                <input 
+                  class="form-check-input" 
+                  type="checkbox" 
+                  id="termsCheckbox"
+                  required
+                  aria-required="true"
+                  aria-describedby="termsHelp"
+                />
+                <label class="form-check-label" for="termsCheckbox">
+                  I agree to receive updates about Intel's sustainability efforts <span aria-label="required">*</span>
+                </label>
+              </div>
+              <small id="termsHelp" class="form-text text-muted d-block mt-2">You must agree to subscribe to the newsletter.</small>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary w-100" aria-label="Subscribe to Intel sustainability newsletter">
+              Subscribe
+            </button>
+          </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white py-4 mt-5" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <!-- Copyright Notice -->
+        <div class="col-md-6 mb-3 mb-md-0">
+          <p class="mb-0">
+            &copy; 2024 Intel Corporation. All rights reserved.
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="col-md-6">
+          <nav aria-label="Footer navigation">
+            <ul class="list-unstyled d-flex gap-4 justify-content-center justify-content-md-end mb-0">
+              <li>
+                <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none">Terms of Use</a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script>
     // Allow the mouse wheel to scroll the horizontal timeline on large screens
@@ -255,6 +500,155 @@
     mediaQuery.addEventListener("change", (event) => {
       if (event.matches) {
         timelineCards.forEach((card) => card.classList.remove("is-active"));
+      }
+    });
+  </script>
+
+  <!-- Bootstrap JavaScript Bundle for interactive components -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- Language Detection and RTL Auto-Apply Script -->
+  <script>
+    /**
+     * RTL Language Detection and Auto-Application
+     * Detects when the page language changes (via Google Translate or other means)
+     * and automatically applies RTL styles and attributes
+     */
+    
+    // List of RTL languages (ISO 639-1 codes)
+    const RTL_LANGUAGES = [
+      'ar',  // Arabic
+      'he',  // Hebrew
+      'fa',  // Persian/Farsi
+      'ur',  // Urdu
+      'yi',  // Yiddish
+      'ji',  // Yiddish (alternate)
+      'iw',  // Hebrew (alternate)
+      'ps',  // Pashto
+      'sd'   // Sindhi
+    ];
+
+    /**
+     * Detects if a language code is RTL
+     * @param {string} langCode - Language code (e.g., 'ar', 'en')
+     * @returns {boolean} - True if language is RTL
+     */
+    function isRTLLanguage(langCode) {
+      if (!langCode) return false;
+      // Extract base language code (e.g., 'ar' from 'ar-SA')
+      const baseLang = langCode.split('-')[0].toLowerCase();
+      return RTL_LANGUAGES.includes(baseLang);
+    }
+
+    /**
+     * Apply RTL or LTR attributes and classes to the document
+     * @param {boolean} isRTL - Whether to apply RTL styling
+     */
+    function applyTextDirection(isRTL) {
+      const html = document.documentElement;
+      
+      if (isRTL) {
+        // Apply RTL
+        html.dir = 'rtl';
+        html.lang = html.lang || 'ar'; // Set default RTL language if not set
+        document.body.style.direction = 'rtl';
+        
+        // Store preference in sessionStorage for consistency
+        sessionStorage.setItem('textDirection', 'rtl');
+        
+        console.log('✓ RTL layout applied for language:', html.lang);
+      } else {
+        // Apply LTR
+        html.dir = 'ltr';
+        document.body.style.direction = 'ltr';
+        
+        // Store preference in sessionStorage
+        sessionStorage.setItem('textDirection', 'ltr');
+        
+        console.log('✓ LTR layout applied for language:', html.lang);
+      }
+    }
+
+    /**
+     * Check current page language and apply appropriate direction
+     */
+    function checkAndApplyLanguage() {
+      const currentLang = document.documentElement.lang || navigator.language;
+      const isRTL = isRTLLanguage(currentLang);
+      applyTextDirection(isRTL);
+    }
+
+    /**
+     * Setup observer to detect language changes (for Google Translate)
+     * Google Translate changes the lang attribute dynamically
+     */
+    function setupLanguageObserver() {
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
+            // Language attribute changed (likely due to Google Translate)
+            console.log('Language changed to:', document.documentElement.lang);
+            checkAndApplyLanguage();
+          }
+        });
+      });
+
+      // Observe changes to the html element's attributes
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['lang', 'dir']
+      });
+
+      return observer;
+    }
+
+    /**
+     * Listen for Google Translate completion events
+     * This handles the case where translation happens after page load
+     */
+    function setupGoogleTranslateListener() {
+      // Check if Google Translate is present
+      if (typeof google !== 'undefined' && typeof google.translate !== 'undefined') {
+        // Google Translate uses this event when translation is complete
+        const translateElement = document.querySelector('.goog-te-combo');
+        if (translateElement) {
+          translateElement.addEventListener('change', () => {
+            setTimeout(() => {
+              checkAndApplyLanguage();
+            }, 100);
+          });
+        }
+      }
+    }
+
+    /**
+     * Initialize on DOM ready
+     */
+    function init() {
+      // Check language on initial page load
+      checkAndApplyLanguage();
+      
+      // Setup observer for attribute changes
+      setupLanguageObserver();
+      
+      // Setup Google Translate listener
+      setupGoogleTranslateListener();
+      
+      console.log('Language detection and RTL auto-apply initialized');
+    }
+
+    // Run initialization when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      // DOM is already loaded
+      init();
+    }
+
+    // Also watch for visibility changes to re-check after Google Translate modal closes
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) {
+        checkAndApplyLanguage();
       }
     });
   </script>

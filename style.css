@@ -1,9 +1,11 @@
 /* Add your CSS here */
 
-/* Page background */
+/* Page background with font optimization */
 body {
 	background-color: #f2f6fb;
 	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /* Hero styles */
@@ -35,6 +37,7 @@ body {
 	background-position: center;
 	opacity: 0.25;
 	pointer-events: none;
+	will-change: opacity;
 }
 
 .hero-content {
@@ -51,13 +54,61 @@ body {
 
 .hero h1 {
 	font-size: 36px;
+	line-height: 1.4;
 }
 
 .hero p {
 	font-size: 18px;
 	font-weight: 400;
-	line-height: 1.2;
-	margin: 6px 0;
+	line-height: 1.6;
+	margin: 10px 0;
+}
+
+/* Focus styles for keyboard navigation */
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+	outline: 3px solid #0066cc;
+	outline-offset: 2px;
+}
+
+/* Improved form field styling for better accessibility */
+.form-control:focus {
+	border-color: #0066cc;
+	box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.25);
+}
+
+.form-label {
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+}
+
+/* Better button contrast and focus styles */
+.btn:focus {
+	box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.5);
+}
+
+/* Screen reader only content - hidden visually but available to assistive technology */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+.sr-only-focusable:focus {
+	position: static;
+	width: auto;
+	height: auto;
+	overflow: visible;
+	clip: auto;
+	white-space: normal;
+	padding: 0.5rem;
+	background-color: #0066cc;
+	color: white;
 }
 
 /* Timeline styles */
@@ -70,6 +121,9 @@ body {
 	width: 70%;
 	margin: 12px auto;
 	border-radius: 2px;
+	/* Optimize scrolling performance */
+	will-change: scroll-position;
+	transform: translateZ(0);
 }
 
 .timeline {
@@ -281,4 +335,41 @@ body {
 		transform: scale(1.03);
 		box-shadow: 0 10px 22px rgba(11, 95, 165, 0.35);
 	}
+}
+
+/* RTL Language Support Styles */
+/* These styles ensure proper layout when dir="rtl" is applied */
+html[dir="rtl"],
+html[dir="rtl"] body {
+	direction: rtl;
+	text-align: right;
+}
+
+html[dir="rtl"] body {
+	text-align: right;
+}
+
+/* Adjust padding/margin for RTL in specific components */
+html[dir="rtl"] .timeline {
+	padding-left: 10px;
+	padding-right: 40px;
+}
+
+html[dir="rtl"] .hero-content {
+	text-align: center; /* Keep heading centered in both directions */
+}
+
+/* Ensure form labels align properly in RTL */
+html[dir="rtl"] .form-label {
+	text-align: right;
+}
+
+/* Adjust button alignment for RTL */
+html[dir="rtl"] .btn {
+	text-align: center;
+}
+
+/* Ensure images display correctly in RTL */
+html[dir="rtl"] img {
+	direction: inherit;
 }
