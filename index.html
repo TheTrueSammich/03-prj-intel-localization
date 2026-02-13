@@ -64,7 +64,7 @@
     <section class="timeline">
 
     <!-- Card 1: 1968 -->
-    <article class="timeline-card">
+    <article class="timeline-card" tabindex="0" role="button" aria-pressed="false">
       <h2>1968</h2>
       <h3>Intel Founded</h3>
       <p>
@@ -77,7 +77,7 @@
     </article>
 
     <!-- Card 2: 1971 -->
-    <article class="timeline-card">
+    <article class="timeline-card" tabindex="0" role="button" aria-pressed="false">
       <h2>1971</h2>
       <h3>First Microprocessor</h3>
       <p>
@@ -90,7 +90,7 @@
     </article>
 
     <!-- Card 3: 1978 -->
-    <article class="timeline-card">
+    <article class="timeline-card" tabindex="0" role="button" aria-pressed="false">
       <h2>1978</h2>
       <h3>8086 Processor</h3>
       <p>
@@ -102,7 +102,7 @@
     </article>
 
     <!-- Card 4: 1985 -->
-    <article class="timeline-card">
+    <article class="timeline-card" tabindex="0" role="button" aria-pressed="false">
       <h2>1985</h2>
       <h3>386 Processor</h3>
       <p>
@@ -115,7 +115,7 @@
     </article>
 
     <!-- Card 5: 2006 -->
-    <article class="timeline-card">
+    <article class="timeline-card" tabindex="0" role="button" aria-pressed="false">
       <h2>2006</h2>
       <h3>Peak GHG Emissions</h3>
       <p>
@@ -129,7 +129,7 @@
     </article>
 
     <!-- Card 6: 2020 -->
-    <article class="timeline-card">
+    <article class="timeline-card" tabindex="0" role="button" aria-pressed="false">
       <h2>2020</h2>
       <h3>RISE Strategy</h3>
       <p>
@@ -142,7 +142,7 @@
     </article>
 
     <!-- Card 7: 2022 -->
-    <article class="timeline-card">
+    <article class="timeline-card" tabindex="0" role="button" aria-pressed="false">
       <h2>2022</h2>
       <h3>Net-Zero By 2040</h3>
       <p>
@@ -155,7 +155,7 @@
     </article>
 
     <!-- Card 8: 2023 -->
-    <article class="timeline-card">
+    <article class="timeline-card" tabindex="0" role="button" aria-pressed="false">
       <h2>2023</h2>
       <h3>Renewable Electricity</h3>
       <p>
@@ -168,7 +168,7 @@
     </article>
 
     <!-- Card 9: 2024 -->
-    <article class="timeline-card">
+    <article class="timeline-card" tabindex="0" role="button" aria-pressed="false">
       <h2>2024</h2>
       <h3>Sustainability Summit</h3>
       <p>
@@ -267,6 +267,158 @@
     </div>
   </section>
 
+  <!-- Accordion Component: Sustainability FAQs -->
+  <section class="faq-section bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+      
+      <!-- Bootstrap Accordion Component -->
+      <div class="accordion" id="sustainabilityAccordion">
+        
+        <!-- Accordion Item 1 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button 
+              class="accordion-button" 
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#collapseOne" 
+              aria-expanded="true" 
+              aria-controls="collapseOne"
+            >
+              What is Intel's net-zero commitment?
+            </button>
+          </h3>
+          <div 
+            id="collapseOne" 
+            class="accordion-collapse collapse show" 
+            data-bs-parent="#sustainabilityAccordion"
+          >
+            <div class="accordion-body">
+              <strong>Intel has committed to achieving net-zero greenhouse gas emissions</strong> 
+              (Scope 1 and 2) across its global operations by 2040. This builds on decades of 
+              environmental initiatives and represents our dedication to combating climate change 
+              while maintaining industry-leading manufacturing standards.
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button 
+              class="accordion-button collapsed" 
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#collapseTwo" 
+              aria-expanded="false" 
+              aria-controls="collapseTwo"
+            >
+              How much renewable electricity does Intel use?
+            </button>
+          </h3>
+          <div 
+            id="collapseTwo" 
+            class="accordion-collapse collapse" 
+            data-bs-parent="#sustainabilityAccordion"
+          >
+            <div class="accordion-body">
+              <strong>Intel achieved 99% renewable electricity usage worldwide</strong> as of 2023. 
+              This milestone represents years of investment in renewable energy partnerships and 
+              on-site generation, significantly reducing our carbon emissions and supporting the 
+              global transition to clean energy.
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button 
+              class="accordion-button collapsed" 
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#collapseThree" 
+              aria-expanded="false" 
+              aria-controls="collapseThree"
+            >
+              What is Intel's RISE strategy?
+            </button>
+          </h3>
+          <div 
+            id="collapseThree" 
+            class="accordion-collapse collapse" 
+            data-bs-parent="#sustainabilityAccordion"
+          >
+            <div class="accordion-body">
+              <strong>RISE stands for Responsible, Inclusive, Sustainable, and Enabling.</strong>
+              Launched in 2020, this strategy outlines Intel's commitment to driving industry-wide 
+              progress on climate action, water stewardship, waste reduction, human rights, and 
+              diversity—creating positive impact for people and the planet.
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 4 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button 
+              class="accordion-button collapsed" 
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#collapseFour" 
+              aria-expanded="false" 
+              aria-controls="collapseFour"
+            >
+              How does Intel reduce water usage?
+            </button>
+          </h3>
+          <div 
+            id="collapseFour" 
+            class="accordion-collapse collapse" 
+            data-bs-parent="#sustainabilityAccordion"
+          >
+            <div class="accordion-body">
+              <strong>Water stewardship is a core pillar of Intel's sustainability efforts.</strong>
+              We invest in advanced manufacturing technologies, recycled water systems, and 
+              conservation practices to minimize water consumption. Our facilities use closed-loop 
+              systems and partner with communities to protect local water resources.
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 5 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button 
+              class="accordion-button collapsed" 
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#collapseFive" 
+              aria-expanded="false" 
+              aria-controls="collapseFive"
+            >
+              How can I learn more about Intel's sustainability initiatives?
+            </button>
+          </h3>
+          <div 
+            id="collapseFive" 
+            class="accordion-collapse collapse" 
+            data-bs-parent="#sustainabilityAccordion"
+          >
+            <div class="accordion-body">
+              <strong>Intel publishes detailed sustainability reports annually</strong> detailing 
+              progress toward our 2030 and 2040 goals. You can visit Intel's official sustainability 
+              website, attend the annual Sustainability Summit, or subscribe to our newsletter 
+              (below!) to stay informed about our latest initiatives and achievements.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Newsletter Subscription Section -->
   <section class="newsletter-section bg-light py-5">
     <div class="container">
@@ -307,7 +459,7 @@
                 type="email" 
                 class="form-control" 
                 id="emailInput" 
-                placeholder="your.email@example.com"
+                placeholder="youremail@example.com"
                 required
                 aria-required="true"
                 aria-describedby="emailHelp"
@@ -482,6 +634,7 @@
 
     // Tap to show details on small screens only
     timelineCards.forEach((card) => {
+      // Click/Tap handler
       card.addEventListener("click", () => {
         if (mediaQuery.matches) {
           return;
@@ -494,6 +647,36 @@
         });
 
         card.classList.toggle("is-active");
+        card.setAttribute("aria-pressed", card.classList.contains("is-active"));
+      });
+
+      // Keyboard handler: Enter and Space keys
+      card.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault(); // Prevent default space scroll behavior
+          
+          if (mediaQuery.matches) {
+            return;
+          }
+
+          timelineCards.forEach((otherCard) => {
+            if (otherCard !== card) {
+              otherCard.classList.remove("is-active");
+            }
+          });
+
+          card.classList.toggle("is-active");
+          card.setAttribute("aria-pressed", card.classList.contains("is-active"));
+        }
+      });
+
+      // Focus handler: highlight card on focus for better visibility
+      card.addEventListener("focus", () => {
+        card.classList.add("focused");
+      });
+
+      card.addEventListener("blur", () => {
+        card.classList.remove("focused");
       });
     });
 

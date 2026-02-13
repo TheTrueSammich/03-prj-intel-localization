@@ -70,10 +70,27 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
 	outline-offset: 2px;
 }
 
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+select:focus:not(:focus-visible) {
+	outline: none;
+}
+
+a:focus-visible, 
+button:focus-visible, 
+input:focus-visible, 
+textarea:focus-visible, 
+select:focus-visible {
+	outline: 3px solid #0066cc;
+	outline-offset: 2px;
+}
+
 /* Improved form field styling for better accessibility */
 .form-control:focus {
 	border-color: #0066cc;
-	box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.25);
+	box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.25), 0 0 0 3px rgba(0, 102, 204, 0.15);
 }
 
 .form-label {
@@ -84,6 +101,14 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
 /* Better button contrast and focus styles */
 .btn:focus {
 	box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.5);
+	outline: 2px solid #0066cc;
+	outline-offset: 2px;
+}
+
+.btn:focus-visible {
+	box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.5);
+	outline: 2px solid #0066cc;
+	outline-offset: 2px;
 }
 
 /* Screen reader only content - hidden visually but available to assistive technology */
@@ -106,9 +131,14 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
 	overflow: visible;
 	clip: auto;
 	white-space: normal;
-	padding: 0.5rem;
+	padding: 0.75rem 1rem;
 	background-color: #0066cc;
 	color: white;
+	font-weight: 600;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	display: block;
 }
 
 /* Timeline styles */
@@ -372,4 +402,83 @@ html[dir="rtl"] .btn {
 /* Ensure images display correctly in RTL */
 html[dir="rtl"] img {
 	direction: inherit;
+}
+
+/* Timeline card interactive states */
+.timeline-card {
+	/* Make timeline cards focusable with visible focus ring */
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.timeline-card:focus {
+	/* Visible focus ring for keyboard navigation */
+	outline: 3px solid #0066cc;
+	outline-offset: 2px;
+}
+
+.timeline-card:focus:not(:focus-visible) {
+	/* Remove focus ring if not keyboard focused (mouse users) */
+	outline: none;
+}
+
+.timeline-card:focus-visible {
+	/* Ensure focus ring is visible for keyboard users */
+	outline: 3px solid #0066cc;
+	outline-offset: 2px;
+}
+
+.timeline-card.focused {
+	/* Additional visual feedback for keyboard focus */
+	box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3);
+}
+.faq-section {
+	margin: 40px 0;
+}
+
+.faq-section h2 {
+	font-size: 32px;
+	font-weight: 700;
+	color: #0b5fa5;
+	margin-bottom: 1.5rem;
+}
+
+/* Bootstrap Accordion customization */
+.accordion-button {
+	font-weight: 500;
+	font-size: 16px;
+	color: #0b5fa5;
+	background-color: #f8f9fa;
+	border-color: #dee2e6;
+	padding: 1rem 1.25rem;
+}
+
+.accordion-button:not(.collapsed) {
+	/* When expanded */
+	background-color: #0b5fa5;
+	color: #ffffff;
+	box-shadow: none;
+}
+
+.accordion-button:focus {
+	border-color: #0066cc;
+	box-shadow: 0 0 0 0.25rem rgba(0, 102, 204, 0.25);
+	outline: 2px solid #0066cc;
+	outline-offset: 2px;
+}
+
+.accordion-button::after {
+	/* Ensure arrow icon displays correctly in RTL */
+	flex-shrink: 0;
+}
+
+.accordion-body {
+	padding: 1.25rem;
+	line-height: 1.6;
+	color: #333333;
+}
+
+.accordion-item {
+	border-color: #dee2e6;
+	margin-bottom: 0.5rem;
 }
